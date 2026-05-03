@@ -59,6 +59,6 @@ function mostrarResumen() {
     document.querySelector(".config-layout").innerHTML = `
         <h2>Resumen de tu configuración</h2>
         <p>Tu mesa ha sido configurada correctamente.</p>
-        <a class="btn-primary" href="/pages/contacto.html">Solicitar presupuesto</a>
+        <a class="btn-primary" href="pages/contacto.html">Solicitar presupuesto</a>
     `;
 }

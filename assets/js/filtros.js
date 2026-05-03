@@ -1,7 +1,7 @@
 // Cargar productos y renderizar catálogo
 let productos = [];
 
-fetch('/data/productos.json')
+fetch('data/productos.json')
     .then(res => res.json())
     .then(data => {
         productos = data;
@@ -20,7 +20,7 @@ function renderProductos(lista) {
                 <h3>${p.nombre}</h3>
                 <p>${p.descripcion}</p>
                 <p><strong>Desde ${p.precio_base} €</strong></p>
-                <a href="/pages/detalle.html?id=${p.id}">Ver detalles</a>
+                <a href="pages/detalle.html?id=${p.id}">Ver detalles</a>
             </div>
         `;
     });
