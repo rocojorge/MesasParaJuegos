@@ -1,4 +1,4 @@
-fetch('data/sillas.json')
+fetch('../../data/sillas.json')
     .then(res => res.json())
     .then(data => {
         const contenedor = document.getElementById('grid-sillas');
@@ -9,7 +9,7 @@ fetch('data/sillas.json')
                     <h3>${s.nombre}</h3>
                     <p>${s.descripcion}</p>
                     <p><strong>${s.precio} €</strong></p>
-                    <a href="pages/detalle-silla.html?id=${s.id}">Ver detalles</a>
+                    <a href="../../pages/detalle-silla.html?id=${s.id}">Ver detalles</a>
                 </div>
             `;
         });

@@ -19,7 +19,7 @@ fetch('../data/productos.json')
                     <div class="img-placeholder"></div>
                     <h3>${producto.nombre}</h3>
                     <p>${producto.descripcion}</p>
-                    <a href="pages/detalle.html?id=${producto.id}">Ver detalles</a>
+                    <a href="../pages/detalle.html?id=${producto.id}">Ver detalles</a>
                 </div>
             `;
         });
