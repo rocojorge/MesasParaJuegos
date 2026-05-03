@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
-fetch('/data/sillas.json')
+fetch('data/sillas.json')
     .then(res => res.json())
     .then(data => {
         const silla = data.find(s => s.id === id);

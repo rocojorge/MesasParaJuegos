@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
-fetch('/data/accesorios.json')
+fetch('data/accesorios.json')
     .then(res => res.json())
     .then(data => {
         const acc = data.find(a => a.id === id);
