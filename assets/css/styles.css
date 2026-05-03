@@ -1,0 +1,116 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* HEADER */
+header {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+/* HERO */
+.hero {
+    background: #ddd;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 1.5rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* USP */
+.usp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.usp-item {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* CATÁLOGO DESTACADO */
+.destacado {
+    padding: 2rem;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-producto {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+/* EXPLICATIVA */
+.explicativa {
+    padding: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card-mini {
+    background: #eee;
+    height: 120px;
+}
+
+/* TIMELINE */
+.timeline {
+    padding: 2rem;
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.step {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+}

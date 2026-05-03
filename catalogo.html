@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Mesas</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script defer src="/assets/js/componentes.js"></script>
+    <script defer src="/assets/js/filtros.js"></script>
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<main>
+
+    <!-- MIGAS DE PAN -->
+    <nav class="breadcrumbs">
+        <a href="/index.html">Inicio</a> > 
+        <a href="/catalogo.html">Productos</a> > 
+        Mesas
+    </nav>
+
+    <!-- TÍTULO -->
+    <section class="titulo-pagina">
+        <h1>Catálogo de Mesas</h1>
+        <p>Encuentra la mesa perfecta para tu espacio y tu estilo de juego.</p>
+    </section>
+
+    <div class="layout-catalogo">
+
+        <!-- FILTROS -->
+        <aside class="filtros">
+            <h3>Filtros</h3>
+
+            <label>Tipo de mesa</label>
+            <select id="filtro-tipo">
+                <option value="todos">Todos</option>
+                <option value="heracles">Heracles</option>
+                <option value="especial">Especiales</option>
+                <option value="centro">Centro</option>
+            </select>
+
+            <label>Tamaño</label>
+            <select id="filtro-tamano">
+                <option value="todos">Todos</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+
+            <label>Precio</label>
+            <input type="range" id="filtro-precio" min="200" max="3000" value="3000">
+            <span id="precio-max">3000 €</span>
+
+            <button id="btn-filtrar">Filtrar</button>
+
+            <hr>
+
+            <!-- ACCESORIOS COMPATIBLES -->
+            <h3>Accesorios compatibles</h3>
+            <ul>
+                <li>Posavasos</li>
+                <li>Bandejas</li>
+                <li>Cajones</li>
+            </ul>
+            <a href="/pages/accesorios.html">Ver todos los accesorios</a>
+        </aside>
+
+        <!-- LISTADO DE PRODUCTOS -->
+        <section class="listado">
+            <div id="grid-productos" class="grid-productos"></div>
+        </section>
+
+    </div>
+
+    <!-- CTA SECUNDARIOS -->
+    <section class="cta-secundario">
+        <a href="/pages/guia-tamanos.html">¿No sabes qué mesa elegir? → Ver guía de tamaños</a>
+        <a href="/pages/configurador.html">Configurar una mesa</a>
+    </section>
+
+</main>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

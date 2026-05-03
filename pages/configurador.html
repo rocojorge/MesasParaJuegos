@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador de Mesa</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script defer src="/assets/js/componentes.js"></script>
+    <script defer src="/assets/js/configurador.js"></script>
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<main>
+
+    <h1>Configurador de Mesa</h1>
+
+    <!-- PASOS -->
+    <nav class="pasos">
+        <span class="paso activo">Material</span>
+        <span class="paso">Color</span>
+        <span class="paso">Tapete</span>
+        <span class="paso">Cajón</span>
+        <span class="paso">Lámina</span>
+        <span class="paso">LEDs</span>
+        <span class="paso">Cierre Magnético</span>
+    </nav>
+
+    <section class="config-layout">
+
+        <!-- IMAGEN 3D -->
+        <div class="config-3d" id="vista-3d"></div>
+
+        <!-- OPCIONES -->
+        <div class="config-opciones">
+            <h2 id="titulo-paso">Material</h2>
+            <div id="opciones"></div>
+
+            <button id="btn-siguiente" class="btn-primary">Siguiente</button>
+        </div>
+
+        <!-- IMAGEN EJEMPLO -->
+        <div class="config-ejemplo" id="imagen-ejemplo"></div>
+
+    </section>
+
+</main>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

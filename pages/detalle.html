@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script defer src="/assets/js/componentes.js"></script>
+    <script defer src="/assets/js/detalle.js"></script>
+</head>
+
+<body>
+
+<header id="header"></header>
+
+<main>
+
+    <!-- MIGAS DE PAN -->
+    <nav class="breadcrumbs">
+        <a href="/index.html">Inicio</a> > 
+        <a href="/catalogo.html">Productos</a> > 
+        <span id="breadcrumb-nombre"></span>
+    </nav>
+
+    <section class="detalle-layout">
+
+        <!-- IMAGEN PRINCIPAL -->
+        <div class="detalle-imagen" id="imagen-producto"></div>
+
+        <!-- INFORMACIÓN -->
+        <div class="detalle-info">
+            <h1 id="nombre-producto"></h1>
+            <p id="descripcion-producto"></p>
+
+            <a class="btn-primary" id="btn-configurar" href="/pages/configurador.html">Configurar</a>
+            <a class="btn-secondary" href="/pages/contacto.html">Solicitar presupuesto</a>
+
+            <h3>Accesorios compatibles</h3>
+            <ul id="lista-accesorios"></ul>
+        </div>
+
+    </section>
+
+    <!-- TABLA DE MEDIDAS Y PRECIOS -->
+    <section class="tablas">
+        <h2>Medidas y Precios</h2>
+
+        <table class="tabla-medidas" id="tabla-medidas"></table>
+        <table class="tabla-precios" id="tabla-precios"></table>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="galeria">
+        <h2>Galería</h2>
+        <div id="galeria-grid" class="grid-5"></div>
+    </section>
+
+</main>
+
+<footer id="footer"></footer>
+
+</body>
+</html>

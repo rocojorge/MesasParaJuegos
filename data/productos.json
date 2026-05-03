@@ -1,0 +1,28 @@
+[
+    {
+        "id": "heracles-xl",
+        "nombre": "Heracles XL",
+        "descripcion": "Mesa premium con tapete elevable.",
+        "tipo": "heracles",
+        "tamanos": ["L", "XL"],
+        "precio_base": 1800,
+        "precios": [
+            { "tamano": "L", "precio": 1500 },
+            { "tamano": "XL", "precio": 1800 }
+        ],
+        "accesorios": ["posavasos", "bandeja"]
+    },
+    {
+        "id": "zeus",
+        "nombre": "Mesa Zeus",
+        "descripcion": "Mesa modular con accesorios laterales.",
+        "tipo": "especial",
+        "tamanos": ["M", "L"],
+        "precio_base": 1400,
+        "precios": [
+            { "tamano": "M", "precio": 1200 },
+            { "tamano": "L", "precio": 1400 }
+        ],
+        "accesorios": ["cajon", "bandeja"]
+    }
+]
