@@ -1,49 +1,58 @@
-// Cargar productos y renderizar catálogo
+const catalogRoot = window.location.pathname.includes('/pages/') ? '../' : '';
 let productos = [];
 
-fetch('../../data/productos.json')
+function mediaPath(src) {
+    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
+    return `${catalogRoot}${src}`;
+}
+
+fetch(`${catalogRoot}data/productos.json`)
     .then(res => res.json())
     .then(data => {
         productos = data;
         renderProductos(productos);
+    })
+    .catch(() => {
+        document.getElementById('grid-productos').innerHTML = '<p>No se ha podido cargar el catálogo.</p>';
     });
 
-// Renderizar tarjetas de producto
 function renderProductos(lista) {
     const contenedor = document.getElementById('grid-productos');
-    contenedor.innerHTML = "";
+    if (!contenedor) return;
 
-    lista.forEach(p => {
-        contenedor.innerHTML += `
-            <div class="card-producto">
-                <div class="img-placeholder"></div>
+    if (!lista.length) {
+        contenedor.innerHTML = '<p>No hay mesas que coincidan con esos filtros.</p>';
+        return;
+    }
+
+    contenedor.innerHTML = lista.map(p => `
+        <article class="card-producto">
+            <img src="${mediaPath(p.imagen)}" alt="${p.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+            <div class="contenido">
                 <h3>${p.nombre}</h3>
                 <p>${p.descripcion}</p>
                 <p><strong>Desde ${p.precio_base} €</strong></p>
-                <a href="pages/detalle.html?id=${p.id}">Ver detalles</a>
+                <a href="${catalogRoot}pages/detalle.html?id=${p.id}">Ver detalles</a>
             </div>
-        `;
-    });
+        </article>
+    `).join('');
 }
 
-// FILTROS
-document.getElementById('btn-filtrar').addEventListener('click', () => {
+document.getElementById('btn-filtrar')?.addEventListener('click', () => {
     const tipo = document.getElementById('filtro-tipo').value;
     const tamano = document.getElementById('filtro-tamano').value;
-    const precioMax = document.getElementById('filtro-precio').value;
+    const precioMax = Number(document.getElementById('filtro-precio').value);
 
     const filtrados = productos.filter(p => {
-        const coincideTipo = tipo === "todos" || p.tipo === tipo;
-        const coincideTamano = tamano === "todos" || p.tamanos.includes(tamano);
+        const coincideTipo = tipo === 'todos' || p.tipo === tipo;
+        const coincideTamano = tamano === 'todos' || p.tamanos.includes(tamano);
         const coincidePrecio = p.precio_base <= precioMax;
-
         return coincideTipo && coincideTamano && coincidePrecio;
     });
 
     renderProductos(filtrados);
 });
 
-// Actualizar texto del precio
-document.getElementById('filtro-precio').addEventListener('input', e => {
-    document.getElementById('precio-max').textContent = e.target.value + " €";
+document.getElementById('filtro-precio')?.addEventListener('input', e => {
+    document.getElementById('precio-max').textContent = `${e.target.value} €`;
 });

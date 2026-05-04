@@ -1,11 +1,27 @@
 [
     {
+        "id": "zeus",
+        "nombre": "Zeus",
+        "descripcion": "Mesa para juegos en madera maciza de roble o pino, con carril exterior ancho y accesorios compatibles.",
+        "tipo": "especial",
+        "tamanos": ["M", "L", "XL"],
+        "precio_base": 1400,
+        "imagen": "assets/media/productos/zeus.webp",
+        "precios": [
+            { "tamano": "M", "precio": 1200 },
+            { "tamano": "L", "precio": 1400 },
+            { "tamano": "XL", "precio": 1800 }
+        ],
+        "accesorios": ["cajon", "bandeja", "posavasos"]
+    },
+    {
         "id": "heracles-xl",
         "nombre": "Heracles XL",
-        "descripcion": "Mesa premium con tapete elevable.",
+        "descripcion": "Mesa premium con tapete elevable, tablero amplio y diseño preparado para partidas de gran formato.",
         "tipo": "heracles",
         "tamanos": ["L", "XL"],
         "precio_base": 1800,
+        "imagen": "assets/media/productos/heracles-xl.webp",
         "precios": [
             { "tamano": "L", "precio": 1500 },
             { "tamano": "XL", "precio": 1800 }
@@ -13,16 +29,16 @@
         "accesorios": ["posavasos", "bandeja"]
     },
     {
-        "id": "zeus",
-        "nombre": "Mesa Zeus",
-        "descripcion": "Mesa modular con accesorios laterales.",
-        "tipo": "especial",
-        "tamanos": ["M", "L"],
-        "precio_base": 1400,
+        "id": "andromeda",
+        "nombre": "Andrómeda",
+        "descripcion": "Mesa redonda compacta en madera maciza de roble, ideal para grupos reducidos y espacios elegantes.",
+        "tipo": "centro",
+        "tamanos": ["M"],
+        "precio_base": 980,
+        "imagen": "assets/media/productos/andromeda.webp",
         "precios": [
-            { "tamano": "M", "precio": 1200 },
-            { "tamano": "L", "precio": 1400 }
+            { "tamano": "M", "precio": 980 }
         ],
-        "accesorios": ["cajon", "bandeja"]
+        "accesorios": ["posavasos", "bandeja"]
     }
 ]

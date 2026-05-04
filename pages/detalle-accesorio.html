@@ -3,42 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Accesorio</title>
+    <title>Detalle de Accesorio | Mesas Para Juegos</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script defer src="../assets/js/componentes.js"></script>
     <script defer src="../assets/js/detalle-accesorio.js"></script>
 </head>
-
 <body>
+    <header id="header"></header>
 
-<header id="header"></header>
+    <main>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="accesorios.html">Accesorios</a> &gt;
+            <span id="breadcrumb-nombre"></span>
+        </nav>
 
-<main>
+        <section class="detalle-layout">
+            <div class="detalle-imagen" id="imagen-accesorio"></div>
 
-    <nav class="breadcrumbs">
-        <a href="../index.html">Inicio</a> > 
-        <a href="accesorios.html">Accesorios</a> > 
-        <span id="breadcrumb-nombre"></span>
-    </nav>
+            <div class="detalle-info">
+                <span class="eyebrow">Accesorio</span>
+                <h1 id="nombre-accesorio"></h1>
+                <p id="descripcion-accesorio"></p>
+                <p class="precio"><strong id="precio-accesorio"></strong></p>
+                <a class="btn-primary" href="contacto.html">Solicitar información</a>
+            </div>
+        </section>
+    </main>
 
-    <section class="detalle-layout">
-
-        <div class="detalle-imagen" id="imagen-accesorio"></div>
-
-        <div class="detalle-info">
-            <h1 id="nombre-accesorio"></h1>
-            <p id="descripcion-accesorio"></p>
-
-            <p class="precio"><strong id="precio-accesorio"></strong></p>
-
-            <a class="btn-primary" href="contacto.html">Solicitar información</a>
-        </div>
-
-    </section>
-
-</main>
-
-<footer id="footer"></footer>
-
+    <footer id="footer"></footer>
 </body>
 </html>

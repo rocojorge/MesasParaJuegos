@@ -3,45 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Silla</title>
+    <title>Detalle de Silla | Mesas Para Juegos</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script defer src="../assets/js/componentes.js"></script>
     <script defer src="../assets/js/detalle-silla.js"></script>
 </head>
-
 <body>
+    <header id="header"></header>
 
-<header id="header"></header>
+    <main>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="sillas.html">Sillas</a> &gt;
+            <span id="breadcrumb-nombre"></span>
+        </nav>
 
-<main>
+        <section class="detalle-layout">
+            <div class="detalle-imagen" id="imagen-silla"></div>
 
-    <nav class="breadcrumbs">
-        <a href="../index.html">Inicio</a> > 
-        <a href="sillas.html">Sillas</a> > 
-        <span id="breadcrumb-nombre"></span>
-    </nav>
+            <div class="detalle-info">
+                <span class="eyebrow">Silla</span>
+                <h1 id="nombre-silla"></h1>
+                <p id="descripcion-silla"></p>
 
-    <section class="detalle-layout">
+                <h3>Características</h3>
+                <ul id="caracteristicas-silla"></ul>
 
-        <div class="detalle-imagen" id="imagen-silla"></div>
+                <p class="precio"><strong id="precio-silla"></strong></p>
+                <a class="btn-primary" href="contacto.html">Solicitar información</a>
+            </div>
+        </section>
+    </main>
 
-        <div class="detalle-info">
-            <h1 id="nombre-silla"></h1>
-            <p id="descripcion-silla"></p>
-
-            <h3>Características</h3>
-            <ul id="caracteristicas-silla"></ul>
-
-            <p class="precio"><strong id="precio-silla"></strong></p>
-
-            <a class="btn-primary" href="contacto.html">Solicitar información</a>
-        </div>
-
-    </section>
-
-</main>
-
-<footer id="footer"></footer>
-
+    <footer id="footer"></footer>
 </body>
 </html>

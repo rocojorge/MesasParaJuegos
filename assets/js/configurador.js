@@ -1,50 +1,42 @@
-// Pasos del configurador
-const pasos = ["Material", "Color", "Tapete", "Cajón", "Lámina", "LEDs", "Cierre Magnético"];
+const pasos = ['Material', 'Color', 'Tapete', 'Cajón', 'Lámina', 'LEDs', 'Cierre magnético'];
 let pasoActual = 0;
+const seleccion = {};
 
-// Opciones simuladas
 const opciones = {
-    Material: ["Roble", "Nogal", "Pino"],
-    Color: ["Natural", "Oscuro", "Blanco"],
-    Tapete: ["Rojo", "Azul", "Verde"],
-    Cajón: ["Sí", "No"],
-    Lámina: ["Transparente", "Opaca"],
-    LEDs: ["Sí", "No"],
-    "Cierre Magnético": ["Sí", "No"]
+    Material: ['Roble', 'Nogal', 'Pino'],
+    Color: ['Natural', 'Oscuro', 'Blanco'],
+    Tapete: ['Rojo', 'Azul', 'Verde'],
+    Cajón: ['Sí', 'No'],
+    Lámina: ['Transparente', 'Opaca'],
+    LEDs: ['Sí', 'No'],
+    'Cierre magnético': ['Sí', 'No']
 };
 
-// Renderizar paso actual
 function renderPaso() {
-    document.getElementById("titulo-paso").textContent = pasos[pasoActual];
+    document.getElementById('titulo-paso').textContent = pasos[pasoActual];
 
-    const contenedor = document.getElementById("opciones");
-    contenedor.innerHTML = "";
+    const contenedor = document.getElementById('opciones');
+    contenedor.innerHTML = opciones[pasos[pasoActual]].map(op => `
+        <label class="opcion">
+            <input type="radio" name="opcion" value="${op}" ${seleccion[pasos[pasoActual]] === op ? 'checked' : ''}>
+            ${op}
+        </label>
+    `).join('');
 
-    opciones[pasos[pasoActual]].forEach(op => {
-        contenedor.innerHTML += `
-            <label class="opcion">
-                <input type="radio" name="opcion" value="${op}">
-                ${op}
-            </label>
-        `;
-    });
-
-    // Actualizar barra de pasos
-    document.querySelectorAll(".paso").forEach((p, i) => {
-        p.classList.toggle("activo", i === pasoActual);
+    document.querySelectorAll('.paso').forEach((p, i) => {
+        p.classList.toggle('activo', i === pasoActual);
     });
 }
 
-renderPaso();
+document.getElementById('btn-siguiente').addEventListener('click', () => {
+    const elegida = document.querySelector("input[name='opcion']:checked");
 
-// Botón siguiente
-document.getElementById("btn-siguiente").addEventListener("click", () => {
-    const seleccion = document.querySelector("input[name='opcion']:checked");
-
-    if (!seleccion) {
-        alert("Selecciona una opción para continuar");
+    if (!elegida) {
+        alert('Selecciona una opción para continuar');
         return;
     }
+
+    seleccion[pasos[pasoActual]] = elegida.value;
 
     if (pasoActual < pasos.length - 1) {
         pasoActual++;
@@ -54,11 +46,19 @@ document.getElementById("btn-siguiente").addEventListener("click", () => {
     }
 });
 
-// Resumen final
 function mostrarResumen() {
-    document.querySelector(".config-layout").innerHTML = `
-        <h2>Resumen de tu configuración</h2>
-        <p>Tu mesa ha sido configurada correctamente.</p>
-        <a class="btn-primary" href="../../pages/contacto.html">Solicitar presupuesto</a>
+    const resumen = Object.entries(seleccion)
+        .map(([clave, valor]) => `<li><strong>${clave}:</strong> ${valor}</li>`)
+        .join('');
+
+    document.querySelector('.config-layout').innerHTML = `
+        <section class="panel">
+            <h2>Resumen de tu configuración</h2>
+            <p>Tu mesa está lista para enviarse como solicitud de presupuesto.</p>
+            <ul>${resumen}</ul>
+            <a class="btn-primary" href="contacto.html">Solicitar presupuesto</a>
+        </section>
     `;
 }
+
+renderPaso();

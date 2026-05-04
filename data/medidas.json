@@ -1,10 +1,14 @@
 {
+    "zeus": [
+        { "tamano": "M", "largo": 160, "ancho": 95, "alto": 78 },
+        { "tamano": "L", "largo": 185, "ancho": 105, "alto": 78 },
+        { "tamano": "XL", "largo": 205, "ancho": 116, "alto": 78 }
+    ],
     "heracles-xl": [
         { "tamano": "L", "largo": 150, "ancho": 90, "alto": 78 },
         { "tamano": "XL", "largo": 180, "ancho": 100, "alto": 78 }
     ],
-    "zeus": [
-        { "tamano": "M", "largo": 130, "ancho": 80, "alto": 76 },
-        { "tamano": "L", "largo": 150, "ancho": 90, "alto": 76 }
+    "andromeda": [
+        { "tamano": "M", "largo": 130, "ancho": 130, "alto": 76 }
     ]
 }

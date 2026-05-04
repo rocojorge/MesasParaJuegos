@@ -3,52 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurador de Mesa</title>
+    <title>Configurador de Mesa | Mesas Para Juegos</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script defer src="../assets/js/componentes.js"></script>
     <script defer src="../assets/js/configurador.js"></script>
 </head>
-
 <body>
+    <header id="header"></header>
 
-<header id="header"></header>
+    <main>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a> &gt;
+            <span>Configurador</span>
+        </nav>
 
-<main>
+        <section class="titulo-pagina">
+            <span class="eyebrow">Configurador</span>
+            <h1>Diseña la mesa que encaja con tus partidas</h1>
+            <p>Selecciona materiales, acabados y extras para preparar una solicitud de presupuesto.</p>
+        </section>
 
-    <h1>Configurador de Mesa</h1>
+        <nav class="pasos" aria-label="Pasos del configurador">
+            <span class="paso activo">Material</span>
+            <span class="paso">Color</span>
+            <span class="paso">Tapete</span>
+            <span class="paso">Cajón</span>
+            <span class="paso">Lámina</span>
+            <span class="paso">LEDs</span>
+            <span class="paso">Cierre magnético</span>
+        </nav>
 
-    <!-- PASOS -->
-    <nav class="pasos">
-        <span class="paso activo">Material</span>
-        <span class="paso">Color</span>
-        <span class="paso">Tapete</span>
-        <span class="paso">Cajón</span>
-        <span class="paso">Lámina</span>
-        <span class="paso">LEDs</span>
-        <span class="paso">Cierre Magnético</span>
-    </nav>
+        <section class="config-layout">
+            <div class="config-3d" id="vista-3d" aria-hidden="true"></div>
 
-    <section class="config-layout">
+            <div class="config-opciones">
+                <h2 id="titulo-paso">Material</h2>
+                <div id="opciones"></div>
+                <button id="btn-siguiente" class="btn-primary">Siguiente</button>
+            </div>
+        </section>
+    </main>
 
-        <!-- IMAGEN 3D -->
-        <div class="config-3d" id="vista-3d"></div>
-
-        <!-- OPCIONES -->
-        <div class="config-opciones">
-            <h2 id="titulo-paso">Material</h2>
-            <div id="opciones"></div>
-
-            <button id="btn-siguiente" class="btn-primary">Siguiente</button>
-        </div>
-
-        <!-- IMAGEN EJEMPLO -->
-        <div class="config-ejemplo" id="imagen-ejemplo"></div>
-
-    </section>
-
-</main>
-
-<footer id="footer"></footer>
-
+    <footer id="footer"></footer>
 </body>
 </html>

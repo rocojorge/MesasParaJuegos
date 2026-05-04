@@ -3,61 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Producto</title>
+    <title>Detalle de Mesa | Mesas Para Juegos</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script defer src="../assets/js/componentes.js"></script>
     <script defer src="../assets/js/detalle.js"></script>
 </head>
-
 <body>
+    <header id="header"></header>
 
-<header id="header"></header>
+    <main>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a> &gt;
+            <a href="../catalogo.html">Mesas</a> &gt;
+            <span id="breadcrumb-nombre"></span>
+        </nav>
 
-<main>
+        <section class="detalle-layout">
+            <div class="detalle-imagen" id="imagen-producto"></div>
 
-    <!-- MIGAS DE PAN -->
-    <nav class="breadcrumbs">
-        <a href="../index.html">Inicio</a> > 
-        <a href="../catalogo.html">Productos</a> > 
-        <span id="breadcrumb-nombre"></span>
-    </nav>
+            <div class="detalle-info">
+                <span class="eyebrow">Mesa personalizable</span>
+                <h1 id="nombre-producto"></h1>
+                <p id="descripcion-producto"></p>
 
-    <section class="detalle-layout">
+                <a class="btn-primary" id="btn-configurar" href="configurador.html">Configurar</a>
+                <a class="btn-secondary" href="contacto.html">Solicitar presupuesto</a>
 
-        <!-- IMAGEN PRINCIPAL -->
-        <div class="detalle-imagen" id="imagen-producto"></div>
+                <h3>Accesorios compatibles</h3>
+                <ul id="lista-accesorios"></ul>
+            </div>
+        </section>
 
-        <!-- INFORMACIÓN -->
-        <div class="detalle-info">
-            <h1 id="nombre-producto"></h1>
-            <p id="descripcion-producto"></p>
+        <section class="tablas">
+            <h2>Medidas y precios</h2>
+            <table class="tabla-medidas" id="tabla-medidas"></table>
+            <table class="tabla-precios" id="tabla-precios"></table>
+        </section>
 
-            <a class="btn-primary" id="btn-configurar" href="configurador.html">Configurar</a>
-            <a class="btn-secondary" href="contacto.html">Solicitar presupuesto</a>
+        <section class="galeria">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">Galería</span>
+                    <h2>Acabados y detalles</h2>
+                </div>
+            </div>
+            <div id="galeria-grid" class="grid-5"></div>
+        </section>
+    </main>
 
-            <h3>Accesorios compatibles</h3>
-            <ul id="lista-accesorios"></ul>
-        </div>
-
-    </section>
-
-    <!-- TABLA DE MEDIDAS Y PRECIOS -->
-    <section class="tablas">
-        <h2>Medidas y Precios</h2>
-
-        <table class="tabla-medidas" id="tabla-medidas"></table>
-        <table class="tabla-precios" id="tabla-precios"></table>
-    </section>
-
-    <!-- GALERÍA -->
-    <section class="galeria">
-        <h2>Galería</h2>
-        <div id="galeria-grid" class="grid-5"></div>
-    </section>
-
-</main>
-
-<footer id="footer"></footer>
-
+    <footer id="footer"></footer>
 </body>
 </html>
