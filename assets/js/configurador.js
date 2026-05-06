@@ -1,64 +1,139 @@
-const pasos = ['Material', 'Color', 'Tapete', 'Cajón', 'Lámina', 'LEDs', 'Cierre magnético'];
-let pasoActual = 0;
-const seleccion = {};
+const basePath = window.location.pathname.includes('/pages/') ? '..' : '.';
+const params = new URLSearchParams(window.location.search);
+const mesaID = params.get('id');
 
-const opciones = {
-    Material: ['Roble', 'Nogal', 'Pino'],
-    Color: ['Natural', 'Oscuro', 'Blanco'],
-    Tapete: ['Rojo', 'Azul', 'Verde'],
-    Cajón: ['Sí', 'No'],
-    Lámina: ['Transparente', 'Opaca'],
-    LEDs: ['Sí', 'No'],
-    'Cierre magnético': ['Sí', 'No']
+let mesaSeleccionada = null;
+let pasoActual = 0;
+const configuracion = {};
+
+const pasos = ['Material', 'Color', 'Tapete', 'Cajon', 'Lamina', 'LEDs', 'Cierre magnetico'];
+const clavesPaso = {
+    Material: 'materiales',
+    Color: 'colores',
+    Tapete: 'tapetes',
+    Cajon: 'cajon',
+    Lamina: 'lamina',
+    LEDs: 'leds',
+    'Cierre magnetico': 'cierre'
 };
 
-function renderPaso() {
-    document.getElementById('titulo-paso').textContent = pasos[pasoActual];
+fetch(`${basePath}/data/productos.json`)
+    .then(res => res.json())
+    .then(data => {
+        mesaSeleccionada = data.find(producto => producto.id === mesaID);
 
-    const contenedor = document.getElementById('opciones');
-    contenedor.innerHTML = opciones[pasos[pasoActual]].map(op => `
+        if (!mesaSeleccionada) {
+            document.querySelector('main').innerHTML = `
+                <section class="titulo-pagina">
+                    <h1>No se ha encontrado la mesa</h1>
+                    <p>Vuelve al catalogo para seleccionar un modelo valido.</p>
+                    <a class="btn-primary" href="../catalogo.html">Volver al catalogo</a>
+                </section>
+            `;
+            return;
+        }
+
+        document.getElementById('titulo-mesa').textContent = `Configurando: ${mesaSeleccionada.nombre}`;
+        document.getElementById('vista-3d').innerHTML = `
+            <img
+                src="../${mesaSeleccionada.imagen}"
+                alt="${mesaSeleccionada.nombre}"
+                onerror="this.parentElement.classList.add('sin-imagen'); this.remove();"
+            >
+        `;
+
+        renderPaso();
+    });
+
+function renderPaso() {
+    const tituloPaso = document.getElementById('titulo-paso');
+    const opcionesDiv = document.getElementById('opciones');
+    const paso = pasos[pasoActual];
+    const opciones = mesaSeleccionada[clavesPaso[paso]] || [];
+    const seleccionActual = configuracion[paso];
+
+    tituloPaso.textContent = paso;
+    opcionesDiv.innerHTML = opciones.map(opcion => `
         <label class="opcion">
-            <input type="radio" name="opcion" value="${op}" ${seleccion[pasos[pasoActual]] === op ? 'checked' : ''}>
-            ${op}
+            <input type="radio" name="opcion" value="${opcion}" ${seleccionActual === opcion ? 'checked' : ''}>
+            <span>${opcion}</span>
         </label>
     `).join('');
 
-    document.querySelectorAll('.paso').forEach((p, i) => {
-        p.classList.toggle('activo', i === pasoActual);
+    document.querySelectorAll('.paso').forEach((elemento, indice) => {
+        elemento.classList.toggle('activo', indice === pasoActual);
     });
 }
 
 document.getElementById('btn-siguiente').addEventListener('click', () => {
-    const elegida = document.querySelector("input[name='opcion']:checked");
+    const seleccion = document.querySelector("input[name='opcion']:checked");
 
-    if (!elegida) {
-        alert('Selecciona una opción para continuar');
+    if (!seleccion) {
+        alert('Selecciona una opcion para continuar');
         return;
     }
 
-    seleccion[pasos[pasoActual]] = elegida.value;
+    configuracion[pasos[pasoActual]] = seleccion.value;
 
     if (pasoActual < pasos.length - 1) {
-        pasoActual++;
+        pasoActual += 1;
         renderPaso();
-    } else {
-        mostrarResumen();
+        return;
     }
+
+    mostrarResumen();
 });
 
+function construirPayload() {
+    return {
+        mesa: {
+            id: mesaSeleccionada.id,
+            nombre: mesaSeleccionada.nombre,
+            precio_base: mesaSeleccionada.precio_base
+        },
+        configuracion,
+        generado_en: new Date().toISOString()
+    };
+}
+
+function descargarConfiguracion() {
+    const payload = construirPayload();
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const enlace = document.createElement('a');
+
+    enlace.href = url;
+    enlace.download = `${mesaSeleccionada.id}-configuracion.json`;
+    document.body.appendChild(enlace);
+    enlace.click();
+    enlace.remove();
+    URL.revokeObjectURL(url);
+}
+
 function mostrarResumen() {
-    const resumen = Object.entries(seleccion)
-        .map(([clave, valor]) => `<li><strong>${clave}:</strong> ${valor}</li>`)
+    const listaHTML = Object.entries(configuracion)
+        .map(([clave, valor]) => `
+            <li class="config-item">
+                <span class="config-label">${clave}</span>
+                <span class="config-value">${valor}</span>
+            </li>
+        `)
         .join('');
 
     document.querySelector('.config-layout').innerHTML = `
-        <section class="panel">
-            <h2>Resumen de tu configuración</h2>
-            <p>Tu mesa está lista para enviarse como solicitud de presupuesto.</p>
-            <ul>${resumen}</ul>
-            <a class="btn-primary" href="contacto.html">Solicitar presupuesto</a>
-        </section>
+        <div class="config-resumen">
+            <h2>Resumen de tu configuracion</h2>
+            <div class="config-resumen-box">
+                <h3>${mesaSeleccionada.nombre}</h3>
+                <ul class="config-list">${listaHTML}</ul>
+            </div>
+            <div class="hero-actions">
+                <button id="btn-descargar-config" class="btn-primary" type="button">Descargar configuracion</button>
+                <a class="btn-secondary" href="contacto.html">Solicitar presupuesto</a>
+            </div>
+        </div>
     `;
-}
 
-renderPaso();
+    document.getElementById('btn-descargar-config').addEventListener('click', descargarConfiguracion);
+    descargarConfiguracion();
+}

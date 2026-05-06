@@ -19,7 +19,8 @@ Promise.all([
     document.getElementById('descripcion-producto').textContent = producto.descripcion;
     document.getElementById('breadcrumb-nombre').textContent = producto.nombre;
     document.getElementById('imagen-producto').innerHTML = `<img src="${mediaPath(producto.imagen)}" alt="${producto.nombre}" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">`;
-
+    document.getElementById("btn-configurar").href = `configurador.html?id=${producto.id}`;
+    
     const listaAcc = document.getElementById('lista-accesorios');
     listaAcc.innerHTML = producto.accesorios.map(a => {
         const acc = accesorios.find(x => x.id === a);

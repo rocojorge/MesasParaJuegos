@@ -12,7 +12,15 @@
             { "tamano": "L", "precio": 1400 },
             { "tamano": "XL", "precio": 1800 }
         ],
-        "accesorios": ["cajon", "bandeja", "posavasos"]
+        "accesorios": ["cajon", "bandeja", "posavasos"],
+
+        "materiales": ["Roble", "Nogal"],
+        "colores": ["Natural", "Oscuro", "Blanco"],
+        "tapetes": ["Rojo", "Azul", "Verde"],
+        "cajon": ["Sí", "No"],
+        "lamina": ["Transparente", "Opaca"],
+        "leds": ["Sí", "No"],
+        "cierre": ["Sí", "No"]
     },
     {
         "id": "heracles-xl",
@@ -26,7 +34,15 @@
             { "tamano": "L", "precio": 1500 },
             { "tamano": "XL", "precio": 1800 }
         ],
-        "accesorios": ["posavasos", "bandeja"]
+        "accesorios": ["posavasos", "bandeja"],
+
+        "materiales": ["Roble", "Cerezo"],
+        "colores": ["Natural", "Nogal"],
+        "tapetes": ["Rojo", "Verde"],
+        "cajon": ["Sí", "No"],
+        "lamina": ["Transparente", "Opaca"],
+        "leds": ["Sí", "No"],
+        "cierre": ["Sí", "No"]
     },
     {
         "id": "andromeda",
@@ -39,6 +55,14 @@
         "precios": [
             { "tamano": "M", "precio": 980 }
         ],
-        "accesorios": ["posavasos", "bandeja"]
+        "accesorios": ["posavasos", "bandeja"], 
+
+        "materiales": ["Roble", "Cerezo"],
+        "colores": ["Natural", "Nogal"],
+        "tapetes": ["Rojo", "Verde"],
+        "cajon": ["Sí", "No"],
+        "lamina": ["Transparente"],
+        "leds": ["Sí", "No"],
+        "cierre": ["Sí", "No"]
     }
 ]
