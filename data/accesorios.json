@@ -1,6 +1,30 @@
 [
-    { "id": "lamina-plexiglas", "nombre": "Lámina protectora de plexiglás", "descripcion": "Protege el tapete y permite escribir encima.", "precio": 49 },
-    { "id": "posavasos", "nombre": "Posavasos metálico", "descripcion": "Accesorio lateral para bebidas.", "precio": 19 },
-    { "id": "bandeja", "nombre": "Bandeja lateral", "descripcion": "Superficie auxiliar para componentes.", "precio": 29 },
-    { "id": "cajon", "nombre": "Cajón extraíble", "descripcion": "Almacenamiento integrado para accesorios.", "precio": 39 }
+    {
+        "id": "lamina-plexiglas",
+        "nombre": "Lamina protectora de plexiglas",
+        "descripcion": "Protege el tapete y permite escribir encima.",
+        "precio": 49,
+        "imagen": "assets/media/accesorios/lamina-plexiglas.webp"
+    },
+    {
+        "id": "posavasos",
+        "nombre": "Posavasos de madera",
+        "descripcion": "Accesorio lateral para bebidas.",
+        "precio": 19,
+        "imagen": "assets/media/accesorios/posavasos.webp"
+    },
+    {
+        "id": "bandeja",
+        "nombre": "Bandeja lateral",
+        "descripcion": "Superficie auxiliar para componentes.",
+        "precio": 29,
+        "imagen": "assets/media/accesorios/bandeja.webp"
+    },
+    {
+        "id": "cajon",
+        "nombre": "Cajon extraible",
+        "descripcion": "Almacenamiento integrado para accesorios.",
+        "precio": 39,
+        "imagen": "assets/media/accesorios/cajon.webp"
+    }
 ]

@@ -2,12 +2,13 @@
     {
         "id": "silla-altea",
         "nombre": "Silla Altea",
-        "descripcion": "Silla ergonómica con estructura de madera y tapizado premium.",
+        "descripcion": "Silla ergonomica con estructura de madera y tapizado premium.",
         "precio": 189,
+        "imagen": "assets/media/sillas/silla-altea.webp",
         "caracteristicas": [
             "Estructura de madera maciza",
             "Tapizado acolchado",
-            "Diseño ergonómico",
+            "Diseno ergonomico",
             "Disponible en varios colores"
         ]
     },
@@ -16,10 +17,11 @@
         "nombre": "Silla Elena",
         "descripcion": "Silla elegante con respaldo curvado y asiento acolchado.",
         "precio": 159,
+        "imagen": "assets/media/sillas/silla-elena.webp",
         "caracteristicas": [
             "Respaldo curvado",
             "Asiento acolchado",
-            "Diseño minimalista",
+            "Diseno minimalista",
             "Perfecta para largas sesiones de juego"
         ]
     }

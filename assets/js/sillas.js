@@ -1,14 +1,19 @@
+function mediaPath(src) {
+    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
+    return `../${src}`;
+}
+
 fetch('../data/sillas.json')
     .then(res => res.json())
     .then(data => {
         const contenedor = document.getElementById('grid-sillas');
         contenedor.innerHTML = data.map(s => `
             <article class="card-producto">
-                <div class="img-placeholder" aria-hidden="true"></div>
+                <img src="${mediaPath(s.imagen)}" alt="${s.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
                 <div class="contenido">
                     <h3>${s.nombre}</h3>
                     <p>${s.descripcion}</p>
-                    <p><strong>${s.precio} €</strong></p>
+                    <p><strong>${s.precio} EUR</strong></p>
                     <a href="detalle-silla.html?id=${s.id}">Ver detalles</a>
                 </div>
             </article>

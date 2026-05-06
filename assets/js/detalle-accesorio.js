@@ -1,6 +1,11 @@
 const paramsAccesorio = new URLSearchParams(window.location.search);
 const accesorioId = paramsAccesorio.get('id');
 
+function mediaPath(src) {
+    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
+    return `../${src}`;
+}
+
 fetch('../data/accesorios.json')
     .then(res => res.json())
     .then(data => {
@@ -8,7 +13,13 @@ fetch('../data/accesorios.json')
 
         document.getElementById('nombre-accesorio').textContent = acc.nombre;
         document.getElementById('descripcion-accesorio').textContent = acc.descripcion;
-        document.getElementById('precio-accesorio').textContent = `${acc.precio} €`;
+        document.getElementById('precio-accesorio').textContent = `${acc.precio} EUR`;
         document.getElementById('breadcrumb-nombre').textContent = acc.nombre;
-        document.getElementById('imagen-accesorio').setAttribute('aria-label', acc.nombre);
+        document.getElementById('imagen-accesorio').innerHTML = `
+            <img
+                src="${mediaPath(acc.imagen)}"
+                alt="${acc.nombre}"
+                onerror="this.parentElement.classList.add('sin-imagen'); this.remove();"
+            >
+        `;
     });
