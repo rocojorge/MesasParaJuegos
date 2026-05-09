@@ -16,7 +16,7 @@
         "nombre": "Cajón extraíble",
         "descripcion": "Cajón extraíble para almacenar componentes y accesorios.",
         "precio": 49,
-        "imagen": "assets/media/accesorios/cajon-extraible.webp",
+        "imagen": "assets/media/accesorios/cajon.webp",
         "caracteristicas": [
             "Guías suaves",
             "Gran capacidad",
@@ -103,18 +103,6 @@
         "imagen": "assets/media/accesorios/bandejas-multiusos-4.webp",
         "caracteristicas": [
             "Pack de 4 unidades",
-            "Material resistente",
-            "Apilables"
-        ]
-    },
-    {
-        "id": "bandejas-multiusos-6",
-        "nombre": "Pack de bandejas multiusos (6 uds)",
-        "descripcion": "Pack de 6 bandejas multiusos para organizar componentes.",
-        "precio": 29,
-        "imagen": "assets/media/accesorios/bandejas-multiusos-6.webp",
-        "caracteristicas": [
-            "Pack de 6 unidades",
             "Material resistente",
             "Apilables"
         ]
