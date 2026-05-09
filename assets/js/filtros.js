@@ -44,7 +44,7 @@ document.getElementById('btn-filtrar')?.addEventListener('click', () => {
     const precioMax = Number(document.getElementById('filtro-precio').value);
 
     const filtrados = productos.filter(p => {
-        const coincideTipo = tipo === 'todos' || p.tipo === tipo;
+        const coincideTipo = tipo === 'todos' || p.tipo.includes(tipo);
         const coincideTamano = tamano === 'todos' || p.tamanos.includes(tamano);
         const coincidePrecio = p.precio_base <= precioMax;
         return coincideTipo && coincideTamano && coincidePrecio;

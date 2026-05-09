@@ -1,68 +1,318 @@
 [
-    {
-        "id": "zeus",
-        "nombre": "Zeus",
-        "descripcion": "Mesa para juegos en madera maciza de roble o pino, con carril exterior ancho y accesorios compatibles.",
-        "tipo": "especial",
-        "tamanos": ["M", "L", "XL"],
-        "precio_base": 1400,
-        "imagen": "assets/media/productos/zeus.webp",
-        "precios": [
-            { "tamano": "M", "precio": 1200 },
-            { "tamano": "L", "precio": 1400 },
-            { "tamano": "XL", "precio": 1800 }
-        ],
-        "accesorios": ["cajon", "bandeja", "posavasos"],
+  {
+    "id": "ares",
+    "nombre": "Ares",
+    "descripcion": "Mesa para juegos Ares en madera maciza, diseñada para partidas intensas y uso diario.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1500,
+    "imagen": "assets/media/productos/ares.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1500 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Azul", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
 
-        "materiales": ["Roble", "Nogal"],
-        "colores": ["Natural", "Oscuro", "Blanco"],
-        "tapetes": ["Rojo", "Azul", "Verde"],
-        "cajon": ["Sí", "No"],
-        "lamina": ["Transparente", "Opaca"],
-        "leds": ["Sí", "No"],
-        "cierre": ["Sí", "No"]
-    },
-    {
-        "id": "heracles-xl",
-        "nombre": "Heracles XL",
-        "descripcion": "Mesa premium con tapete elevable, tablero amplio y diseño preparado para partidas de gran formato.",
-        "tipo": "heracles",
-        "tamanos": ["L", "XL"],
-        "precio_base": 1800,
-        "imagen": "assets/media/productos/heracles-xl.webp",
-        "precios": [
-            { "tamano": "L", "precio": 1500 },
-            { "tamano": "XL", "precio": 1800 }
-        ],
-        "accesorios": ["posavasos", "bandeja"],
+  {
+    "id": "zeus",
+    "nombre": "Zeus",
+    "descripcion": "Mesa para juegos en madera maciza de roble o pino, con carril exterior ancho y accesorios compatibles.",
+    "tipo": "comedor",
+    "tamanos": ["M", "L", "XL"],
+    "precio_base": 1400,
+    "imagen": "assets/media/productos/zeus.webp",
+    "precios": [
+    { "tamano": "M", "precio": 1200 },
+    { "tamano": "L", "precio": 1400 },
+    { "tamano": "XL", "precio": 1800 }
+    ],
+    "accesorios": ["cajon", "bandeja", "posavasos"],
+    "materiales": ["Roble", "Pino"],
+    "colores": ["Natural", "Oscuro", "Blanco"],
+    "tapetes": ["Rojo", "Azul", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre": ["Sí", "No"]
+  },
 
-        "materiales": ["Roble", "Cerezo"],
-        "colores": ["Natural", "Nogal"],
-        "tapetes": ["Rojo", "Verde"],
-        "cajon": ["Sí", "No"],
-        "lamina": ["Transparente", "Opaca"],
-        "leds": ["Sí", "No"],
-        "cierre": ["Sí", "No"]
-    },
-    {
-        "id": "andromeda",
-        "nombre": "Andrómeda",
-        "descripcion": "Mesa redonda compacta en madera maciza de roble, ideal para grupos reducidos y espacios elegantes.",
-        "tipo": "centro",
-        "tamanos": ["M"],
-        "precio_base": 980,
-        "imagen": "assets/media/productos/andromeda.webp",
-        "precios": [
-            { "tamano": "M", "precio": 980 }
-        ],
-        "accesorios": ["posavasos", "bandeja"], 
+  {
+    "id": "heracles-m",
+    "nombre": "Heracles M",
+    "descripcion": "Modelo compacto de la gama Heracles, perfecto para espacios reducidos sin perder funcionalidad.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1200,
+    "imagen": "assets/media/productos/heracles-m.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1200 }
+    ],
+    "accesorios": ["posavasos"],
+    "materiales": ["Roble", "Pino"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
 
-        "materiales": ["Roble", "Cerezo"],
-        "colores": ["Natural", "Nogal"],
-        "tapetes": ["Rojo", "Verde"],
-        "cajon": ["Sí", "No"],
-        "lamina": ["Transparente"],
-        "leds": ["Sí", "No"],
-        "cierre": ["Sí", "No"]
-    }
+  {
+    "id": "heracles-l",
+    "nombre": "Heracles L",
+    "descripcion": "Versión intermedia de la gama Heracles, ideal para grupos medianos y partidas de estrategia.",
+    "tipo": "comedor",
+    "tamanos": ["L"],
+    "precio_base": 1500,
+    "imagen": "assets/media/productos/heracles-l.webp",
+    "precios": [
+      { "tamano": "L", "precio": 1500 }
+    ],
+    "accesorios": ["posavasos", "bandeja"], 
+    "materiales": ["Roble", "Pino"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "heracles-xl",
+    "nombre": "Heracles XL",
+    "descripcion": "Mesa premium con tapete elevable, tablero amplio y diseño preparado para partidas de gran formato.",
+    "tipo": "comedor",
+    "tamanos": ["XL"],
+    "precio_base": 1800,
+    "imagen": "assets/media/productos/heracles-xl.webp",
+    "precios": [
+      { "tamano": "XL", "precio": 1800 }
+    ],
+    "accesorios": ["posavasos", "bandeja"],
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Nogal"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "hera",
+    "nombre": "Hera",
+    "descripcion": "Mesa Hera con diseño elegante y gran superficie de juego.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1600,
+    "imagen": "assets/media/productos/hera.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1600 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Azul"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "perseus",
+    "nombre": "Perseus",
+    "descripcion": "Mesa Perseus con estructura reforzada y diseño moderno.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1700,
+    "imagen": "assets/media/productos/perseus.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1700 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "andromeda",
+    "nombre": "Andrómeda",
+    "descripcion": "Mesa Andrómeda con diseño minimalista y superficie amplia.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1550,
+    "imagen": "assets/media/productos/andromeda.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1550 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural"],
+    "tapetes": ["Rojo", "Azul"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "helios",
+    "nombre": "Helios",
+    "descripcion": "Mesa Helios con diseño robusto y detalles artesanales.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1650,
+    "imagen": "assets/media/productos/helios.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1650 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "persefone",
+    "nombre": "Perséfone",
+    "descripcion": "Mesa Perséfone con diseño elegante y acabados premium.",
+    "tipo": "centro",
+    "tamanos": ["M"],
+    "precio_base": 1750,
+    "imagen": "assets/media/productos/persefone.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1750 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural"],
+    "tapetes": ["Rojo", "Azul"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "hades",
+    "nombre": "Hades",
+    "descripcion": "Mesa Hades con diseño imponente y estructura reforzada.",
+    "tipo": ["comedor", "centro"],
+    "tamanos": ["M"],
+    "precio_base": 1800,
+    "imagen": "assets/media/productos/hades.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1800 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "hermes",
+    "nombre": "Hermes",
+    "descripcion": "Mesa Hermes con diseño ligero y líneas modernas.",
+    "tipo": "comedor",
+    "tamanos": ["M"],
+    "precio_base": 1400,
+    "imagen": "assets/media/productos/hermes.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1400 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural"],
+    "tapetes": ["Rojo", "Azul"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "atenea",
+    "nombre": "Athenea",
+    "descripcion": "Mesa Atenea con diseño clásico y superficie amplia.",
+    "tipo": "comedor", 
+    "tamanos": ["M"],
+    "precio_base": 1500,
+    "imagen": "assets/media/productos/atenea.webp",
+    "precios": [
+      { "tamano": "M", "precio": 1500 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+  },
+
+  {
+    "id": "iris",
+    "nombre": "Iris",
+    "descripcion": "Mesa Iris con diseño estilizado y acabados suaves.",
+    "tipo": "portátil",
+    "tamanos": ["M"],
+    "precio_base": 1350,
+    "imagen": "assets/media/productos/iris.webp",
+    "precios": [
+    { "tamano": "M", "precio": 1350 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural"],
+    "tapetes": ["Rojo", "Azul"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+},
+
+{
+    "id": "electra",
+    "nombre": "Electra",
+    "descripcion": "Mesa Electra con diseño moderno y estructura sólida.",
+    "tipo": "centro", 
+    "tamanos": ["M"],
+    "precio_base": 1450,
+    "imagen": "assets/media/productos/electra.webp",
+    "precios": [
+    { "tamano": "M", "precio": 1450 }
+    ],
+    "accesorios": ["posavasos", "bandeja", "cajon"],  
+    "materiales": ["Roble"],
+    "colores": ["Natural", "Oscuro"],
+    "tapetes": ["Rojo", "Verde"],
+    "cajon": ["Sí", "No"],
+    "lamina": ["Transparente", "Opaca"],
+    "leds": ["Sí", "No"],
+    "cierre magnético": ["Sí", "No"]
+}
 ]

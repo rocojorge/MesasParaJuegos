@@ -1,30 +1,206 @@
 [
     {
-        "id": "lamina-plexiglas",
-        "nombre": "Lamina protectora de plexiglas",
-        "descripcion": "Protege el tapete y permite escribir encima.",
+        "id": "extension",
+        "nombre": "Extensión",
+        "descripcion": "Extensión adicional para ampliar la superficie de juego.",
+        "precio": 59,
+        "imagen": "assets/media/accesorios/extension.webp",
+        "caracteristicas": [
+            "Compatible con todas las mesas",
+            "Instalación rápida",
+            "Superficie resistente"
+        ]
+    },
+    {
+        "id": "cajon-extraible",
+        "nombre": "Cajón extraíble",
+        "descripcion": "Cajón extraíble para almacenar componentes y accesorios.",
         "precio": 49,
-        "imagen": "assets/media/accesorios/lamina-plexiglas.webp"
+        "imagen": "assets/media/accesorios/cajon-extraible.webp",
+        "caracteristicas": [
+            "Guías suaves",
+            "Gran capacidad",
+            "Madera maciza"
+        ]
+    },
+    {
+        "id": "soporte-tapas",
+        "nombre": "Soporte para tapas",
+        "descripcion": "Soporte vertical para almacenar las tapas de la mesa.",
+        "precio": 39,
+        "imagen": "assets/media/accesorios/soporte-tapas.webp",
+        "caracteristicas": [
+            "Diseño estable",
+            "Protege las tapas",
+            "Compatible con todos los modelos"
+        ]
+    },
+    {
+        "id": "soporte-tapas-horizontal",
+        "nombre": "Soporte para tapas horizontal",
+        "descripcion": "Soporte horizontal para guardar las tapas de forma segura.",
+        "precio": 39,
+        "imagen": "assets/media/accesorios/soporte-tapas-horizontal.webp",
+        "caracteristicas": [
+            "Ahorra espacio",
+            "Protección acolchada",
+            "Estructura reforzada"
+        ]
+    },
+    {
+        "id": "banqueta-guardatapas",
+        "nombre": "Banqueta guardatapas",
+        "descripcion": "Banqueta con espacio interior para guardar tapas.",
+        "precio": 89,
+        "imagen": "assets/media/accesorios/banqueta-guardatapas.webp",
+        "caracteristicas": [
+            "Asiento acolchado",
+            "Gran capacidad interior",
+            "Estructura robusta"
+        ]
+    },
+    {
+        "id": "arcon-guardatapas",
+        "nombre": "Arcón guardatapas",
+        "descripcion": "Arcón diseñado para almacenar tapas y accesorios.",
+        "precio": 129,
+        "imagen": "assets/media/accesorios/arcon-guardatapas.webp",
+        "caracteristicas": [
+            "Tapa abatible",
+            "Gran capacidad",
+            "Madera maciza"
+        ]
+    },
+    {
+        "id": "arcon-guardatapas-xl",
+        "nombre": "Arcón guardatapas XL",
+        "descripcion": "Versión XL del arcón guardatapas con mayor capacidad.",
+        "precio": 159,
+        "imagen": "assets/media/accesorios/arcon-guardatapas-xl.webp",
+        "caracteristicas": [
+            "Capacidad ampliada",
+            "Estructura reforzada",
+            "Ideal para mesas grandes"
+        ]
+    },
+    {
+        "id": "kit-clasificador-tela",
+        "nombre": "Kit clasificador de tela",
+        "descripcion": "Kit de clasificación de tela para organizar componentes.",
+        "precio": 19,
+        "imagen": "assets/media/accesorios/kit-clasificador-tela.webp",
+        "caracteristicas": [
+            "Material flexible",
+            "Lavable",
+            "Incluye varios compartimentos"
+        ]
+    },
+    {
+        "id": "bandejas-multiusos-4",
+        "nombre": "Pack de bandejas multiusos (4 uds)",
+        "descripcion": "Pack de 4 bandejas multiusos para organizar componentes.",
+        "precio": 24,
+        "imagen": "assets/media/accesorios/bandejas-multiusos-4.webp",
+        "caracteristicas": [
+            "Pack de 4 unidades",
+            "Material resistente",
+            "Apilables"
+        ]
+    },
+    {
+        "id": "bandejas-multiusos-6",
+        "nombre": "Pack de bandejas multiusos (6 uds)",
+        "descripcion": "Pack de 6 bandejas multiusos para organizar componentes.",
+        "precio": 29,
+        "imagen": "assets/media/accesorios/bandejas-multiusos-6.webp",
+        "caracteristicas": [
+            "Pack de 6 unidades",
+            "Material resistente",
+            "Apilables"
+        ]
+    },
+    {
+        "id": "cojin",
+        "nombre": "Cojín",
+        "descripcion": "Cojín acolchado para mayor comodidad durante las partidas.",
+        "precio": 15,
+        "imagen": "assets/media/accesorios/cojin.webp",
+        "caracteristicas": [
+            "Acolchado suave",
+            "Funda lavable",
+            "Disponible en varios colores"
+        ]
+    },
+    {
+        "id": "tacos-alzadores-6",
+        "nombre": "Pack de 6 tacos alzadores",
+        "descripcion": "Pack de 6 tacos para elevar la mesa y mejorar la ergonomía.",
+        "precio": 12,
+        "imagen": "assets/media/accesorios/tacos-alzadores-6.webp",
+        "caracteristicas": [
+            "Pack de 6 unidades",
+            "Material antideslizante",
+            "Fáciles de colocar"
+        ]
+    },
+    {
+        "id": "tacos-alzadores-8",
+        "nombre": "Pack de 8 tacos alzadores",
+        "descripcion": "Pack de 8 tacos para elevar la mesa y mejorar la ergonomía.",
+        "precio": 15,
+        "imagen": "assets/media/accesorios/tacos-alzadores-8.webp",
+        "caracteristicas": [
+            "Pack de 8 unidades",
+            "Material antideslizante",
+            "Fáciles de colocar"
+        ]
+    },
+    {
+        "id": "tacos-alzadores-4",
+        "nombre": "Pack de 4 tacos alzadores",
+        "descripcion": "Pack de 4 tacos para elevar la mesa y mejorar la ergonomía.",
+        "precio": 9,
+        "imagen": "assets/media/accesorios/tacos-alzadores-4.webp",
+        "caracteristicas": [
+            "Pack de 4 unidades",
+            "Material antideslizante",
+            "Fáciles de colocar"
+        ]
     },
     {
         "id": "posavasos",
-        "nombre": "Posavasos de madera",
-        "descripcion": "Accesorio lateral para bebidas.",
+        "nombre": "Posavasos",
+        "descripcion": "Posavasos de madera compatible con todas las mesas.",
+        "precio": 12,
+        "imagen": "assets/media/accesorios/posavasos.webp",
+        "caracteristicas": [
+            "Madera maciza",
+            "Acabado premium",
+            "Compatible con carril"
+        ]
+    },
+    {
+        "id": "posatazas",
+        "nombre": "Posatazas",
+        "descripcion": "Posatazas diseñado para bebidas calientes o frías.",
+        "precio": 14,
+        "imagen": "assets/media/accesorios/posatazas.webp",
+        "caracteristicas": [
+            "Aislante térmico",
+            "Madera maciza",
+            "Compatible con carril"
+        ]
+    },
+    {
+        "id": "bandeja-comida",
+        "nombre": "Bandeja de comida",
+        "descripcion": "Bandeja de comida para apoyar platos y snacks durante la partida.",
         "precio": 19,
-        "imagen": "assets/media/accesorios/posavasos.webp"
-    },
-    {
-        "id": "bandeja",
-        "nombre": "Bandeja lateral",
-        "descripcion": "Superficie auxiliar para componentes.",
-        "precio": 29,
-        "imagen": "assets/media/accesorios/bandeja.webp"
-    },
-    {
-        "id": "cajon",
-        "nombre": "Cajon extraible",
-        "descripcion": "Almacenamiento integrado para accesorios.",
-        "precio": 39,
-        "imagen": "assets/media/accesorios/cajon.webp"
+        "imagen": "assets/media/accesorios/bandeja-comida.webp",
+        "caracteristicas": [
+            "Superficie amplia",
+            "Material resistente",
+            "Compatible con carril"
+        ]
     }
 ]

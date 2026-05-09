@@ -24,5 +24,122 @@
             "Diseno minimalista",
             "Perfecta para largas sesiones de juego"
         ]
+    },
+    {
+        "id": "silla-manila",
+        "nombre": "Silla Manila",
+        "descripcion": "Silla Manila tapizada con diseno moderno y gran comodidad.",
+        "precio": 149,
+        "imagen": "assets/media/sillas/silla-manila.webp",
+        "caracteristicas": [
+            "Tapizado suave y resistente",
+            "Estructura reforzada",
+            "Estilo moderno",
+            "Ideal para mesas de juego"
+        ]
+    },
+    {
+        "id": "silla-kioto",
+        "nombre": "Silla Kioto",
+        "descripcion": "Silla Kioto con reposabrazos y asiento acolchado.",
+        "precio": 199,
+        "imagen": "assets/media/sillas/silla-kioto.webp",
+        "caracteristicas": [
+            "Reposabrazos integrados",
+            "Asiento acolchado",
+            "Estructura robusta",
+            "Medidas: 87 x 55 x 56 cm"
+        ]
+    },
+    {
+        "id": "silla-gema",
+        "nombre": "Silla Gema",
+        "descripcion": "Silla Gema tapizada con diseno elegante y minimalista.",
+        "precio": 139,
+        "imagen": "assets/media/sillas/silla-gema.webp",
+        "caracteristicas": [
+            "Tapizado premium",
+            "Estructura de madera",
+            "Diseno ligero",
+            "Medidas: 89 x 47 x 47 cm"
+        ]
+    },
+    {
+        "id": "silla-pretti",
+        "nombre": "Silla Pretti",
+        "descripcion": "Silla Pretti con tapizado suave y estructura reforzada.",
+        "precio": 149,
+        "imagen": "assets/media/sillas/silla-pretti.webp",
+        "caracteristicas": [
+            "Tapizado acolchado",
+            "Estructura resistente",
+            "Estilo moderno",
+            "Medidas: 89 x 47 x 47 cm"
+        ]
+    },
+    {
+        "id": "silla-sicilia",
+        "nombre": "Silla Sicilia",
+        "descripcion": "Silla Sicilia con diseno elegante y gran comodidad.",
+        "precio": 149,
+        "imagen": "assets/media/sillas/silla-sicilia.webp",
+        "caracteristicas": [
+            "Tapizado de alta calidad",
+            "Estructura de madera",
+            "Diseno estilizado",
+            "Medidas: 89 x 47 x 47 cm"
+        ]
+    },
+    {
+        "id": "silla-anais",
+        "nombre": "Silla Anais",
+        "descripcion": "Silla Anais con diseno estilizado y asiento acolchado.",
+        "precio": 149,
+        "imagen": "assets/media/sillas/silla-anais.webp",
+        "caracteristicas": [
+            "Asiento acolchado",
+            "Estructura de madera",
+            "Diseno elegante",
+            "Medidas: 89 x 47 x 47 cm"
+        ]
+    },
+    {
+        "id": "silla-kandor",
+        "nombre": "Silla Kandor",
+        "descripcion": "Silla Kandor de respaldo alto y estructura reforzada.",
+        "precio": 169,
+        "imagen": "assets/media/sillas/silla-kandor.webp",
+        "caracteristicas": [
+            "Respaldo alto",
+            "Estructura reforzada",
+            "Tapizado premium",
+            "Medidas: 101 x 51 x 46 cm"
+        ]
+    },
+    {
+        "id": "silla-armani",
+        "nombre": "Silla Armani",
+        "descripcion": "Silla Armani con diseno elegante y asiento amplio.",
+        "precio": 189,
+        "imagen": "assets/media/sillas/silla-armani.webp",
+        "caracteristicas": [
+            "Asiento amplio",
+            "Estructura reforzada",
+            "Tapizado de alta calidad",
+            "Medidas: 101 x 51 x 46 cm"
+        ]
+    },
+    {
+        "id": "silla-vogue",
+        "nombre": "Silla Vogue",
+        "descripcion": "Silla Vogue con tapizado premium y diseno moderno.",
+        "precio": 159,
+        "imagen": "assets/media/sillas/silla-vogue.webp",
+        "caracteristicas": [
+            "Tapizado premium",
+            "Estructura de madera",
+            "Diseno moderno",
+            "Medidas: 85 x 50 x 57 cm"
+        ]
     }
 ]
