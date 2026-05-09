@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | Mesas Para Juegos</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Scripts globales -->
+    <script defer src="../assets/js/carrito.js"></script>
+    <script defer src="../assets/js/componentes.js"></script>
+</head>
+<body>
+<header id="header"></header>
+
+<main class="carrito-main">
+    <section class="titulo-pagina">
+        <span class="eyebrow">Carrito</span>
+        <h1>Tu selección</h1>
+        <p>Revisa tus productos antes de solicitar presupuesto.</p>
+    </section>
+
+    <section id="carrito-contenido" class="carrito-contenido"></section>
+
+    <section id="carrito-total" class="carrito-total"></section>
+</main>
+
+<footer id="footer"></footer>
+
+<script>
+function renderCarrito() {
+    const { obtenerCarrito, totalCarrito, actualizarCantidad, eliminarDelCarrito, vaciarCarrito } = window.carritoAPI;
+    const carrito = obtenerCarrito();
+
+    const cont = document.getElementById("carrito-contenido");
+    const totalBox = document.getElementById("carrito-total");
+
+    if (!carrito.length) {
+        cont.innerHTML = `
+            <p>Tu carrito está vacío.</p>
+            <a class="btn-primary" href="../catalogo.html">Volver al catálogo</a>
+        `;
+        totalBox.innerHTML = "";
+        return;
+    }
+
+    cont.innerHTML = carrito.map((item, index) => `
+    <article class="carrito-item">
+        
+        <!-- NUEVO: imagen del producto -->
+        <div class="carrito-thumb">
+            <img src="../assets/media/img/${item.id}.webp" alt="${item.nombre}">
+        </div>
+
+        <div class="carrito-info">
+            <h3>${item.nombre}</h3>
+            <p><strong>${item.precio} €</strong></p>
+
+            ${Object.keys(item.opciones).length > 0 ? `
+                <ul class="carrito-opciones">
+                    ${Object.entries(item.opciones).map(([k, v]) => `
+                        <li><strong>${k}:</strong> ${v}</li>
+                    `).join('')}
+                </ul>
+            ` : `<p class="sin-opciones">Sin opciones</p>`}
+        </div>
+
+        <div class="carrito-controles">
+            <label>Cantidad:</label>
+            <input type="number" min="1" value="${item.cantidad}" data-index="${index}" class="input-cantidad">
+
+            <button class="btn-secondary btn-eliminar" data-index="${index}">
+                Eliminar
+            </button>
+        </div>
+
+    </article>
+`).join('');
+
+
+    totalBox.innerHTML = `
+        <div class="carrito-total-box">
+            <h2>Total: ${totalCarrito()} €</h2>
+            <button id="btn-vaciar" class="btn-secondary">Vaciar carrito</button>
+            <a href="contacto.html" class="btn-primary">Solicitar presupuesto</a>
+        </div>
+    `;
+
+    // Cambiar cantidades
+    document.querySelectorAll(".input-cantidad").forEach(input => {
+        input.addEventListener("change", e => {
+            const index = Number(e.target.dataset.index);
+            const nuevaCantidad = Number(e.target.value);
+            actualizarCantidad(index, nuevaCantidad);
+            renderCarrito();
+        });
+    });
+
+    // Eliminar línea
+    document.querySelectorAll(".btn-eliminar").forEach(btn => {
+        btn.addEventListener("click", e => {
+            const index = Number(e.target.dataset.index);
+            eliminarDelCarrito(index);
+            renderCarrito();
+        });
+    });
+
+    // Vaciar carrito
+    document.getElementById("btn-vaciar").addEventListener("click", () => {
+        vaciarCarrito();
+        renderCarrito();
+    });
+}
+
+window.addEventListener("DOMContentLoaded", renderCarrito);
+</script>
+
+</body>
+</html>

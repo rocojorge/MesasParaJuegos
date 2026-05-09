@@ -34,17 +34,44 @@ function renderHeader() {
                 <a class="brand" href="${pathTo('index.html')}">
                     <span class="brand-logo">Mesas<br>Para Juegos</span>
                 </a>
+
                 <nav class="site-nav" aria-label="Navegación principal">
                     <ul>${nav}</ul>
                 </nav>
+
                 <div class="nav-actions">
                     <a aria-label="Buscar" href="${pathTo('catalogo.html')}">⌕</a>
-                    <a aria-label="Carrito" href="${pathTo('pages/contacto.html')}">0</a>
+
+                    <!-- NUEVO: icono carrito -->
+                    <a aria-label="Carrito" href="${pathTo('pages/carrito.html')}" class="carrito-icon">
+                        🛒 <span id="carrito-count">0</span>
+                    </a>
                 </div>
             </div>
         </div>
     `;
+
+    // ------------------------------
+    // NUEVO: actualizar contador del carrito
+    // ------------------------------
+    function actualizarCarritoHeader() {
+        if (!window.carritoAPI) return;
+
+        const count = window.carritoAPI
+            .obtenerCarrito()
+            .reduce((acc, item) => acc + item.cantidad, 0);
+
+        const span = document.getElementById("carrito-count");
+        if (span) span.textContent = count;
+    }
+
+    // Actualizar al cargar
+    setTimeout(actualizarCarritoHeader, 50);
+
+    // Actualizar si cambia el localStorage
+    window.addEventListener("storage", actualizarCarritoHeader);
 }
+
 
 function renderFooter() {
     const footer = document.getElementById('footer');

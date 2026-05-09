@@ -17,7 +17,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -61,7 +61,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -82,7 +82,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -103,7 +103,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -124,7 +124,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -145,7 +145,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -166,7 +166,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -187,7 +187,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -208,7 +208,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -229,7 +229,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -250,7 +250,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -271,7 +271,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
   },
 
   {
@@ -292,7 +292,7 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
 },
 
 {
@@ -313,6 +313,6 @@
     "cajon": ["Sí", "No"],
     "lamina": ["Transparente", "Opaca"],
     "leds": ["Sí", "No"],
-    "cierre magnético": ["Sí", "No"]
+    "cierre": ["Sí", "No"]
 }
 ]

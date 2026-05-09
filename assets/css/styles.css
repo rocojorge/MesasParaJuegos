@@ -961,3 +961,68 @@ footer a {
         text-align: left;
     }
 }
+
+.carrito-icon {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#carrito-count {
+    background: #e63946;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.carrito-item {
+    display: grid;
+    grid-template-columns: 120px 1fr 150px;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    align-items: start;
+}
+
+.carrito-thumb {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrito-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrito-info h3 {
+    margin: 0 0 .5rem 0;
+}
+
+.carrito-opciones {
+    margin-top: .5rem;
+    padding-left: 1rem;
+}
+
+.carrito-opciones li {
+    font-size: .9rem;
+    margin-bottom: .25rem;
+}
+
+.carrito-controles {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+}

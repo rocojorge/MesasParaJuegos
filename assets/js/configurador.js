@@ -129,11 +129,32 @@ function mostrarResumen() {
             </div>
             <div class="hero-actions">
                 <button id="btn-descargar-config" class="btn-primary" type="button">Descargar configuracion</button>
+
+                <!-- NUEVO: botón agregar al carrito -->
+                <button id="btn-carrito" class="btn-secondary" type="button">Agregar al carrito</button>
+
                 <a class="btn-secondary" href="contacto.html">Solicitar presupuesto</a>
             </div>
         </div>
     `;
 
     document.getElementById('btn-descargar-config').addEventListener('click', descargarConfiguracion);
+
+    // ------------------------------
+    // NUEVO: Agregar al carrito
+    // ------------------------------
+    document.getElementById('btn-carrito').addEventListener('click', () => {
+        window.carritoAPI.agregarAlCarrito({
+            id: mesaSeleccionada.id,
+            nombre: mesaSeleccionada.nombre,
+            precio: mesaSeleccionada.precio_base,
+            cantidad: 1,
+            opciones: { ...configuracion }
+        });
+
+        alert("Mesa configurada añadida al carrito");
+    });
+
+    // Mantienes tu descarga automática si quieres
     descargarConfiguracion();
 }
