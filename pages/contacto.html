@@ -35,7 +35,7 @@
                 </label>
                 <label>
                     Mensaje
-                    <textarea name="mensaje" placeholder="Modelo, medidas aproximadas, acabado y accesorios..."></textarea>
+                    <textarea id="mensaje" name="mensaje" placeholder="Modelo, medidas aproximadas, acabado y accesorios..."></textarea>
                 </label>
                 <button type="submit">Solicitar presupuesto</button>
             </form>
@@ -55,5 +55,17 @@
     </main>
 
     <footer id="footer"></footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const mensaje = localStorage.getItem("presupuesto_carrito_mensaje");
+
+        if (mensaje) {
+            const textarea = document.getElementById("mensaje");
+            if (textarea) textarea.value = "Hola, quiero solicitar presupuesto:\n\n" + mensaje;
+        }
+    });
+    </script>
+
 </body>
 </html>

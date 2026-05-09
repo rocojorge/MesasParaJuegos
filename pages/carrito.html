@@ -82,7 +82,7 @@ function renderCarrito() {
         <div class="carrito-total-box">
             <h2>Total: ${totalCarrito()} €</h2>
             <button id="btn-vaciar" class="btn-secondary">Vaciar carrito</button>
-            <a href="contacto.html" class="btn-primary">Solicitar presupuesto</a>
+            <button id="btn-solicitar" class="btn-primary">Solicitar presupuesto</button>
         </div>
     `;
 
@@ -113,6 +113,21 @@ function renderCarrito() {
 }
 
 window.addEventListener("DOMContentLoaded", renderCarrito);
+</script>
+
+<script>
+document.addEventListener("click", e => {
+    if (e.target.id === "btn-solicitar") {
+
+        const json = window.carritoAPI.carritoComoJSON();
+        const mensaje = window.carritoAPI.carritoComoMensaje();
+
+        localStorage.setItem("presupuesto_carrito_json", json);
+        localStorage.setItem("presupuesto_carrito_mensaje", mensaje);
+
+        window.location.href = "contacto.html";
+    }
+});
 </script>
 
 </body>

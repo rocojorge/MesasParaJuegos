@@ -84,6 +84,26 @@ function totalCarrito() {
     return carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
 }
 
+// Generar JSON del carrito
+function carritoComoJSON() {
+    return JSON.stringify(carrito, null, 2);
+}
+
+// Generar mensaje legible
+function carritoComoMensaje() {
+    return carrito.map(item => {
+        const opciones = Object.entries(item.opciones || {})
+            .map(([k, v]) => `   - ${k}: ${v}`)
+            .join("\n");
+
+        return `• ${item.nombre}
+  Precio: ${item.precio} €
+  Cantidad: ${item.cantidad}
+${opciones ? opciones : ""}`;
+    }).join("\n\n");
+}
+
+
 // Exponer en window para usar desde otras páginas
 window.carritoAPI = {
     obtenerCarrito,
@@ -91,5 +111,8 @@ window.carritoAPI = {
     actualizarCantidad,
     eliminarDelCarrito,
     vaciarCarrito,
-    totalCarrito
+    totalCarrito,
+    carritoComoJSON,
+    carritoComoMensaje
 };
+
