@@ -1,29 +1,39 @@
-const paramsSilla = new URLSearchParams(window.location.search);
-const sillaId = paramsSilla.get('id');
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
-function mediaPath(src) {
-    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
-    return `../${src}`;
-}
-
-fetch('../data/sillas.json')
+fetch("../data/sillas.json")
     .then(res => res.json())
     .then(data => {
-        const silla = data.find(s => s.id === sillaId) || data[0];
+        const silla = data.find(s => s.id === id);
+        if (!silla) return;
 
-        document.getElementById('nombre-silla').textContent = silla.nombre;
-        document.getElementById('descripcion-silla').textContent = silla.descripcion;
-        document.getElementById('precio-silla').textContent = `${silla.precio} EUR`;
-        document.getElementById('breadcrumb-nombre').textContent = silla.nombre;
-        document.getElementById('imagen-silla').innerHTML = `
-            <img
-                src="${mediaPath(silla.imagen)}"
-                alt="${silla.nombre}"
-                onerror="this.parentElement.classList.add('sin-imagen'); this.remove();"
-            >
+        // Rellenar datos
+        document.getElementById("breadcrumb-nombre").textContent = silla.nombre;
+        document.getElementById("nombre-silla").textContent = silla.nombre;
+        document.getElementById("descripcion-silla").textContent = silla.descripcion;
+        document.getElementById("precio-silla").textContent = `${silla.precio} EUR`;
+
+        // Imagen
+        document.getElementById("imagen-silla").innerHTML = `
+            <img src="../${silla.imagen}" alt="${silla.nombre}">
         `;
 
-        document.getElementById('caracteristicas-silla').innerHTML = silla.caracteristicas
+        // Características
+        const lista = document.getElementById("caracteristicas-silla");
+        lista.innerHTML = silla.caracteristicas
             .map(c => `<li>${c}</li>`)
-            .join('');
+            .join("");
+
+        // Activar botón carrito
+        document.getElementById("btn-add-carrito").addEventListener("click", () => {
+            window.carritoAPI.agregarAlCarrito({
+                id: silla.id,
+                nombre: silla.nombre,
+                precio: silla.precio,
+                cantidad: 1,
+                opciones: {} // sin opciones en sillas
+            });
+
+            alert("Silla añadida al carrito");
+        });
     });

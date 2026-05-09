@@ -102,9 +102,11 @@ function renderFooter() {
 function renderProductoCard(producto) {
     return `
         <article class="card-producto">
-            <img src="${mediaPath(producto.imagen)}" alt="${producto.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+            <a href="${pathTo(`pages/detalle.html?id=${producto.id}`)}">
+                <img src="${mediaPath(producto.imagen)}" alt="${producto.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+            </a>
             <div class="contenido">
-                <h3>${producto.nombre}</h3>
+                <h3><a href="${pathTo(`pages/detalle.html?id=${producto.id}`)}">${producto.nombre}</a></h3>
                 <p>${producto.descripcion}</p>
                 <p><strong>Desde ${producto.precio_base} €</strong></p>
                 <a href="${pathTo(`pages/detalle.html?id=${producto.id}`)}">Ver detalles</a>

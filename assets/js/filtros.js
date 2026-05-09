@@ -27,9 +27,11 @@ function renderProductos(lista) {
 
     contenedor.innerHTML = lista.map(p => `
         <article class="card-producto">
-            <img src="${mediaPath(p.imagen)}" alt="${p.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+            <a href="${catalogRoot}pages/detalle.html?id=${p.id}">
+                <img src="${mediaPath(p.imagen)}" alt="${p.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+            </a>
             <div class="contenido">
-                <h3>${p.nombre}</h3>
+                <h3><a href="${catalogRoot}pages/detalle.html?id=${p.id}">${p.nombre}</a></h3>
                 <p>${p.descripcion}</p>
                 <p><strong>Desde ${p.precio_base} €</strong></p>
                 <a href="${catalogRoot}pages/detalle.html?id=${p.id}">Ver detalles</a>
