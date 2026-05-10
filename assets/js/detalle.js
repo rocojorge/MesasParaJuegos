@@ -91,7 +91,7 @@ Promise.all([
                 nombre: producto.nombre,
                 precio: producto.precio_base,
                 cantidad: 1,
-                opciones: {} // sin configuración en esta página
+                opciones: {}
             });
 
             alert("Producto añadido al carrito");

@@ -26,14 +26,15 @@ fetch("../data/sillas.json")
 
         // Activar botón carrito
         document.getElementById("btn-add-carrito").addEventListener("click", () => {
-            window.carritoAPI.agregarAlCarrito({
-                id: silla.id,
-                nombre: silla.nombre,
-                precio: silla.precio,
-                cantidad: 1,
-                opciones: {} // sin opciones en sillas
-            });
+    const cantidad = parseInt(document.getElementById("cantidad").value) || 1;
 
-            alert("Silla añadida al carrito");
+    window.carritoAPI.agregarAlCarrito({
+        id: silla.id,
+        nombre: silla.nombre,
+        precio: silla.precio,
+        cantidad: cantidad,
+        opciones: {} // sin opciones en sillas
+    });
+
         });
     });

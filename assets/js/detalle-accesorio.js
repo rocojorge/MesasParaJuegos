@@ -28,14 +28,14 @@ fetch('../data/accesorios.json')
         // NUEVO: botón añadir al carrito
         // ------------------------------
         document.getElementById("btn-add-carrito").addEventListener("click", () => {
-            window.carritoAPI.agregarAlCarrito({
-                id: acc.id,
-                nombre: acc.nombre,
-                precio: acc.precio,
-                cantidad: 1,
-                opciones: {} // accesorios sin opciones
-            });
+    const cantidad = parseInt(document.getElementById("cantidad").value) || 1;
 
-            alert("Accesorio añadido al carrito");
+    window.carritoAPI.agregarAlCarrito({
+        id: acc.id,
+        nombre: acc.nombre,
+        precio: acc.precio,
+        cantidad: cantidad,
+        opciones: {}
+    });
         });
     });
