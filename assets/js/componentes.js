@@ -5,7 +5,6 @@ const links = [
     { href: 'catalogo.html', label: 'Mesas' },
     { href: 'pages/accesorios.html', label: 'Accesorios' },
     { href: 'pages/sillas.html', label: 'Sillas' },
-    { href: 'pages/guia-tamanos.html', label: 'Entrega inmediata' },
     { href: 'pages/contacto.html', label: 'Contacto' }
 ];
 

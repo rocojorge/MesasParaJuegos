@@ -6,15 +6,15 @@ let mesaSeleccionada = null;
 let pasoActual = 0;
 const configuracion = {};
 
-const pasos = ['Material', 'Color', 'Tapete', 'Cajon', 'Lamina', 'LEDs', 'Cierre magnetico'];
+const pasos = ['Material', 'Color', 'Tapete', 'Cajón', 'Lámina', 'LEDs', 'Cierre magnético'];
 const clavesPaso = {
     Material: 'materiales',
     Color: 'colores',
     Tapete: 'tapetes',
-    Cajon: 'cajon',
-    Lamina: 'lamina',
+    Cajón: 'cajon',
+    Lámina: 'lamina',
     LEDs: 'leds',
-    'Cierre magnetico': 'cierre'
+    'Cierre magnético': 'cierre'
 };
 
 fetch(`${basePath}/data/productos.json`)
@@ -26,8 +26,8 @@ fetch(`${basePath}/data/productos.json`)
             document.querySelector('main').innerHTML = `
                 <section class="titulo-pagina">
                     <h1>No se ha encontrado la mesa</h1>
-                    <p>Vuelve al catalogo para seleccionar un modelo valido.</p>
-                    <a class="btn-primary" href="../catalogo.html">Volver al catalogo</a>
+                    <p>Vuelve al catálogo para seleccionar un modelo válido.</p>
+                    <a class="btn-primary" href="../catalogo.html">Volver al catálogo</a>
                 </section>
             `;
             return;
@@ -156,5 +156,4 @@ function mostrarResumen() {
     });
 
     // Mantienes tu descarga automática si quieres
-    descargarConfiguracion();
-}
+    }

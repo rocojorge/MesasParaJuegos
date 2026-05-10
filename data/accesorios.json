@@ -35,18 +35,7 @@
             "Compatible con todos los modelos"
         ]
     },
-    {
-        "id": "soporte-tapas-horizontal",
-        "nombre": "Soporte para tapas horizontal",
-        "descripcion": "Soporte horizontal para guardar las tapas de forma segura.",
-        "precio": 39,
-        "imagen": "assets/media/accesorios/soporte-tapas-horizontal.webp",
-        "caracteristicas": [
-            "Ahorra espacio",
-            "Protección acolchada",
-            "Estructura reforzada"
-        ]
-    },
+    
     {
         "id": "banqueta-guardatapas",
         "nombre": "Banqueta guardatapas",
