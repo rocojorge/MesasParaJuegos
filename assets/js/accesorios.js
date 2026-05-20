@@ -52,6 +52,5 @@ document.addEventListener("click", e => {
             imagen: btn.dataset.imagen
         });
 
-        alert("Accesorio añadido al carrito");
     }
 });

@@ -52,7 +52,5 @@ document.addEventListener("click", e => {
             cantidad: 1,
             opciones: {}
         });
-
-        alert("Silla añadida al carrito");
     }
 });

@@ -94,7 +94,6 @@ Promise.all([
                 opciones: {}
             });
 
-            alert("Producto añadido al carrito");
         });
     }
 
