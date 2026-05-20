@@ -97,7 +97,7 @@ function renderProductoCard(producto) {
     return `
         <article class="card-producto">
             <a href="${pathTo(`pages/detalle.html?id=${producto.id}`)}">
-                <img src="${mediaPath(producto.imagen)}" alt="${producto.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+                <img src="${mediaPath(producto.imagen)}" alt="${producto.nombre}" loading="lazy" decoding="async" width="900" height="600" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
             </a>
             <div class="contenido">
                 <h3><a href="${pathTo(`pages/detalle.html?id=${producto.id}`)}">${producto.nombre}</a></h3>

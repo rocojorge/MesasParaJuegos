@@ -70,6 +70,7 @@ function crearResultado(item) {
         <article class="card-producto resultado-card">
             <a href="${item.href}">
                 <img src="${mediaPath(item.imagen)}" alt="${item.nombre}" loading="lazy"
+                     decoding="async" width="900" height="600"
                      onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
             </a>
             <div class="contenido">

@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesas Para Juegos | Eleva tu experiencia de juego</title>
+    <link rel="preload" as="image" href="assets/media/hero/hero-poster.webp" fetchpriority="high">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/carrito.js"></script>
     <script defer src="assets/js/componentes.js"></script>
+    <script defer src="assets/js/lazy-video.js"></script>
 </head>
 <body>
     <header id="header"></header>
 
     <main>
         <section class="hero hero-video">
-            <video autoplay muted loop playsinline poster="assets/media/hero/hero-poster.webp">
-                <source src="assets/media/video/hero.mp4" type="video/mp4">
-            </video>
+            <video muted loop playsinline preload="none" poster="assets/media/hero/hero-poster.webp" width="1920" height="1080" data-src="assets/media/video/hero.mp4"></video>
             <div class="hero-overlay"></div>
             <div class="hero-copy">
                 <p class="hero-kicker">ELEVA TU</p>
@@ -52,7 +52,7 @@
 
         <section class="split-feature">
             <div class="feature-image">
-                <img src="assets/media/banners/feature-mesa.webp" alt="Mesa de juegos con zona interior" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
+                <img src="assets/media/banners/feature-mesa.webp" alt="Mesa de juegos con zona interior" loading="lazy" decoding="async" width="1200" height="800" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
             </div>
             <div class="feature-copy">
                 <span class="eyebrow">Diseño funcional</span>
@@ -82,15 +82,15 @@
 
         <section class="banner-grid">
             <a class="image-banner" href="pages/accesorios.html">
-                <img src="assets/media/banners/complementos.webp" alt="Accesorios para mesas" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
+                <img src="assets/media/banners/complementos.webp" alt="Accesorios para mesas" loading="lazy" decoding="async" width="1200" height="800" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
                 <span>Complementos</span>
             </a>
             <a class="image-banner" href="https://mesasparajuegos.com/showroom/">
-                <img src="assets/media/banners/trabajos-realizados.webp" alt="Trabajo realizado de mesa Zeus" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
+                <img src="assets/media/banners/trabajos-realizados.webp" alt="Trabajo realizado de mesa Zeus" loading="lazy" decoding="async" width="540" height="720" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
                 <span>Trabajos realizados</span>
             </a>
             <a class="image-banner" href="pages/contacto.html">
-                <img src="assets/media/banners/resenas.webp" alt="Reseñas de clientes" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
+                <img src="assets/media/banners/resenas.webp" alt="Reseñas de clientes" loading="lazy" decoding="async" width="540" height="720" onerror="this.parentElement.classList.add('sin-imagen'); this.remove();">
                 <span>Reseñas de nuestras mesas</span>
             </a>
         </section>

@@ -11,6 +11,7 @@ fetch('../data/sillas.json')
             <article class="card-producto">
                 <a href="detalle-silla.html?id=${s.id}">
                     <img src="${mediaPath(s.imagen)}" alt="${s.nombre}" loading="lazy"
+                         decoding="async" width="900" height="600"
                          onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
                 </a>
 

@@ -10,6 +10,7 @@ fetch('../data/accesorios.json')
         contenedor.innerHTML = data.map(a => `
             <article class="card-producto">
                 <img src="${mediaPath(a.imagen)}" alt="${a.nombre}" loading="lazy"
+                     decoding="async" width="900" height="600"
                      onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
 
                 <div class="contenido">

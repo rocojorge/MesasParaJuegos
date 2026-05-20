@@ -54,7 +54,7 @@ function renderProductos(lista) {
     contenedor.innerHTML = lista.map(p => `
         <article class="card-producto">
             <a href="${catalogRoot}pages/detalle.html?id=${p.id}">
-                <img src="${mediaPath(p.imagen)}" alt="${p.nombre}" loading="lazy" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
+                <img src="${mediaPath(p.imagen)}" alt="${p.nombre}" loading="lazy" decoding="async" width="900" height="600" onerror="this.closest('.card-producto').classList.add('sin-imagen'); this.remove();">
             </a>
             <div class="contenido">
                 <h3><a href="${catalogRoot}pages/detalle.html?id=${p.id}">${p.nombre}</a></h3>
