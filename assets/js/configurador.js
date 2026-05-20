@@ -122,17 +122,14 @@ function mostrarResumen() {
 
     document.querySelector('.config-layout').innerHTML = `
         <div class="config-resumen">
-            <h2>Resumen de tu configuracion</h2>
+            <h2>Resumen de tu configuración</h2>
             <div class="config-resumen-box">
                 <h3>${mesaSeleccionada.nombre}</h3>
                 <ul class="config-list">${listaHTML}</ul>
             </div>
             <div class="hero-actions">
-                <button id="btn-descargar-config" class="btn-primary" type="button">Descargar configuracion</button>
-
-                <!-- NUEVO: botón agregar al carrito -->
+                <button id="btn-descargar-config" class="btn-primary" type="button">Descargar configuración</button>
                 <button id="btn-carrito" class="btn-secondary" type="button">Agregar al carrito</button>
-
                 <a class="btn-secondary" href="contacto.html">Solicitar presupuesto</a>
             </div>
         </div>
@@ -140,10 +137,12 @@ function mostrarResumen() {
 
     document.getElementById('btn-descargar-config').addEventListener('click', descargarConfiguracion);
 
-    // ------------------------------
-    // NUEVO: Agregar al carrito
-    // ------------------------------
     document.getElementById('btn-carrito').addEventListener('click', () => {
+        if (!window.carritoAPI) {
+            alert('El carrito no está disponible en este momento.');
+            return;
+        }
+
         window.carritoAPI.agregarAlCarrito({
             id: mesaSeleccionada.id,
             nombre: mesaSeleccionada.nombre,
@@ -152,8 +151,6 @@ function mostrarResumen() {
             opciones: { ...configuracion }
         });
 
-        alert("Mesa configurada añadida al carrito");
+        alert('Mesa configurada añadida al carrito');
     });
-
-    // Mantienes tu descarga automática si quieres
-    }
+}

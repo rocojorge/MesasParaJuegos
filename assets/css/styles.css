@@ -57,11 +57,14 @@ section {
 }
 
 .site-header {
-    position: fixed;
-    inset: 0 0 auto;
+    position: sticky;
+    top: 0;
     z-index: 50;
-    background: linear-gradient(180deg, rgba(5, 10, 16, 0.78), rgba(5, 10, 16, 0.18), transparent);
+    background: rgba(16, 24, 33, 0.92);
     color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 16px 44px rgba(5, 10, 16, 0.18);
+    backdrop-filter: blur(18px);
 }
 
 .nav-wrap {
@@ -71,7 +74,7 @@ section {
     gap: 1.5rem;
     max-width: 1380px;
     margin: 0 auto;
-    padding: 1rem 1.35rem;
+    padding: 0.8rem 1.35rem;
 }
 
 .brand {
@@ -83,7 +86,7 @@ section {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 0.45rem 0.75rem;
-    font-size: 0.86rem;
+    font-size: 0.78rem;
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: 0.08em;
@@ -131,7 +134,7 @@ section {
 }
 
 .hero-video {
-    min-height: 100vh;
+    min-height: calc(100vh - 78px);
     position: relative;
     display: grid;
     align-items: end;
@@ -566,7 +569,7 @@ button:hover {
 }
 
 .breadcrumbs {
-    padding: 7rem 1.25rem 0;
+    padding: 1.4rem 1.25rem 0;
     color: var(--muted);
     font-size: 0.95rem;
 }
@@ -577,7 +580,7 @@ button:hover {
 }
 
 .titulo-pagina {
-    padding: 3rem 1.25rem;
+    padding: 2.2rem 1.25rem 3.5rem;
 }
 
 .titulo-pagina p {
@@ -588,18 +591,23 @@ button:hover {
 
 .layout-catalogo {
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
-    gap: 1.4rem;
+    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 4.5rem);
     max-width: var(--container);
     margin: 0 auto;
     padding: 0 1.25rem 5rem;
 }
 
+.layout-catalogo .listado {
+    padding: 0;
+}
+
 .filtros {
     align-self: start;
-    padding: 1rem;
+    padding: 1.35rem;
     position: sticky;
-    top: 92px;
+    top: 100px;
+    box-shadow: 0 18px 50px rgba(16, 24, 33, 0.08);
 }
 
 .filtros h3 {
@@ -613,6 +621,50 @@ button:hover {
     font-size: 0.88rem;
     font-weight: 850;
     text-transform: uppercase;
+}
+
+.filtros select,
+.filtros input[type="range"] {
+    margin-bottom: 1.05rem;
+}
+
+.filtros input[type="range"] {
+    accent-color: var(--green);
+    padding: 0;
+}
+
+#precio-max {
+    display: block;
+    margin: 0.15rem 0 0.9rem;
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+#btn-filtrar {
+    width: 100%;
+    margin-bottom: 1.1rem;
+}
+
+.filtros hr {
+    margin: 1.1rem 0;
+    border: 0;
+    border-top: 1px solid var(--line);
+}
+
+.filtros ul {
+    margin: 0.7rem 0 0.75rem 1.2rem;
+    color: var(--muted);
+}
+
+.filtros li {
+    margin-bottom: 0.25rem;
+}
+
+.filtros a {
+    color: var(--ink);
+    font-weight: 800;
+    text-underline-offset: 0.18em;
 }
 
 select,
@@ -744,7 +796,7 @@ th {
 .config-main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem 3rem;
+    padding: 0 1.5rem 3rem;
 }
 
 .config-main .titulo-pagina {
@@ -753,14 +805,14 @@ th {
 
 .config-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+    gap: clamp(1.5rem, 3vw, 2.4rem);
     align-items: start;
     padding: 0 1.25rem 5rem;
 }
 
 .config-3d {
-    min-height: 540px;
+    min-height: 460px;
     overflow: hidden;
     border-radius: var(--radius);
     border: 1px solid var(--line);
@@ -772,20 +824,24 @@ th {
 .config-3d img {
     width: 100%;
     height: 100%;
-    min-height: 540px;
-    object-fit: cover;
+    min-height: 460px;
+    object-fit: contain;
+    background: #fff;
 }
 
 .config-opciones {
-    min-height: 320px;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1.2rem;
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    box-shadow: 0 18px 50px rgba(16, 24, 33, 0.08);
 }
 
 .config-opciones h2 {
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.05;
 }
 
 #opciones {
@@ -798,8 +854,17 @@ th {
     grid-template-columns: 20px minmax(0, 1fr);
     align-items: start;
     column-gap: 0.75rem;
-    padding: 0.75rem;
+    padding: 0.7rem 0.75rem;
     font-size: 0.95rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    background: rgba(244, 241, 234, 0.62);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.opcion:hover {
+    border-color: rgba(46, 95, 86, 0.22);
+    background: #fff;
 }
 
 .opcion input[type="radio"] {
