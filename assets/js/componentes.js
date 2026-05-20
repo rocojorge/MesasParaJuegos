@@ -39,20 +39,15 @@ function renderHeader() {
                 </nav>
 
                 <div class="nav-actions">
-                    <a aria-label="Buscar" href="${pathTo('catalogo.html')}">⌕</a>
-
-                    <!-- NUEVO: icono carrito -->
+                    <a aria-label="Buscar" href="${pathTo('pages/busqueda.html')}">&#128269;</a>
                     <a aria-label="Carrito" href="${pathTo('pages/carrito.html')}" class="carrito-icon">
-                        🛒 <span id="carrito-count">0</span>
+                        &#128722; <span id="carrito-count">0</span>
                     </a>
                 </div>
             </div>
         </div>
     `;
 
-    // ------------------------------
-    // NUEVO: actualizar contador del carrito
-    // ------------------------------
     function actualizarCarritoHeader() {
         if (!window.carritoAPI) return;
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda | Mesas Para Juegos</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script defer src="../assets/js/carrito.js"></script>
+    <script defer src="../assets/js/componentes.js"></script>
+    <script defer src="../assets/js/busqueda.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a> &gt;
+            <span>Búsqueda</span>
+        </nav>
+
+        <section class="titulo-pagina busqueda-hero">
+            <span class="eyebrow">Buscar</span>
+            <h1>Encuentra mesas, accesorios y sillas</h1>
+            <p>Busca por nombre, material, tamaño, color, accesorio, precio o cualquier detalle del catálogo.</p>
+
+            <form class="busqueda-form" id="form-busqueda">
+                <label class="sr-only" for="busqueda-global">Buscar en el catálogo</label>
+                <input type="search" id="busqueda-global" placeholder="Ejemplo: roble, XL, posavasos, silla..." autocomplete="off">
+                <button type="submit" class="btn-primary">Buscar</button>
+            </form>
+
+            <div class="busqueda-tabs" aria-label="Filtrar resultados">
+                <button type="button" class="activo" data-tipo="todos">Todos</button>
+                <button type="button" data-tipo="mesa">Mesas</button>
+                <button type="button" data-tipo="accesorio">Accesorios</button>
+                <button type="button" data-tipo="silla">Sillas</button>
+            </div>
+        </section>
+
+        <section class="busqueda-resultados">
+            <div class="resultado-meta" id="resultado-meta">Cargando catálogo...</div>
+            <div id="grid-busqueda" class="grid-productos"></div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+</body>
+</html>
