@@ -701,7 +701,11 @@ button:hover {
     align-self: start;
     padding: 1.35rem;
     position: sticky;
-    top: 100px;
+    top: 1.25rem;
+    max-height: calc(100vh - 2.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
     box-shadow: 0 18px 50px rgba(16, 24, 33, 0.08);
 }
 
